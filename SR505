@@ -1,0 +1,23 @@
+#define SIGNAL_PIN D2
+
+void setup()
+{
+  Serial.begin(115200);
+  pinMode(SIGNAL_PIN, INPUT);
+  digitalWrite (SIGNAL_PIN, LOW);
+}
+
+void flip(){
+  Serial.println("From callback");
+  digitalWrite (SIGNAL_PIN, HIGH);
+}
+
+
+void loop() {
+  if(digitalRead(SIGNAL_PIN)==HIGH) {
+    Serial.println("Movement detected.");
+ } else {
+    Serial.println("Did not detect movement.");
+  }
+  delay(5000);
+}

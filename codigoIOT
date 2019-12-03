@@ -4,7 +4,7 @@
 
 //atualize SSID e senha WiFi
 const char* ssid = "IBMHackatruckIoT";
-const char* password = "IOT2017IBM";
+const char* password = "";
 
 
 //D4 only for Lolin board
